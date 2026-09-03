@@ -39,6 +39,20 @@
       ],
       "link": "",
       "category": "Engineering"
+    },
+    {
+      "category": "Hobby",
+      "title": "Tree Net",
+      "slug": "tree-net",
+      "summary": "Built a 40 foot high tree net to accommodate 8 people",
+      "cover": "/images/uploads/img_7102.jpg",
+      "body": "Wove 300 feet of static climbing rope and 3,000 feet of paracord into a net between three trees 40 feet off of the ground. Learned a ton about rope safety, old school rope ascension, knots, and weaving technique. Full project took around 150 hours of work.\n\n\n\nSee YouTube link for completed work.",
+      "gallery": [
+        "/images/uploads/img_7039.jpg",
+        "/images/uploads/img_6926.jpg",
+        "/images/uploads/img_7043.jpg"
+      ],
+      "link": "https://youtu.be/2GM3LPxo2og"
     }
   ]
 }
