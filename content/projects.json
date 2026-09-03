@@ -37,9 +37,6 @@
         "Electrical Test Design"
       ],
       "link": ""
-    },
-    {
-      "body": "LVPDU Switch Project — 06/2025 to 09/2025\n\nLVPDU switch designed to assist battery voltage regulation. Sensitive to voltage levels, spikes, and fails open to protect battery."
     }
   ]
 }
