@@ -37,6 +37,7 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Slug", name: "slug", widget: "string", hint: "Used in the URL — lowercase letters, numbers, and dashes only, no spaces (e.g. my-cool-project)." }
+              - { label: "Category", name: "category", widget: "select", options: ["Engineering", "Hobby"], default: "Engineering", hint: "Which section this shows up in on the homepage." }
               - { label: "Summary", name: "summary", widget: "text", hint: "One or two sentences shown on the project card." }
               - { label: "Cover Image", name: "cover", widget: "image", required: false }
               - label: "Tags"
@@ -52,6 +53,15 @@ collections:
                 widget: "list"
                 required: false
                 field: { label: "Image", name: "image", widget: "image" }
+              - label: "Attachments"
+                name: "attachments"
+                widget: "list"
+                required: false
+                summary: "{{fields.label}}"
+                hint: "Any downloadable files for this project — PDFs, datasheets, reports, etc."
+                fields:
+                  - { label: "Label", name: "label", widget: "string", hint: "What to call this file, e.g. \"Datasheet\" or \"Final Report (PDF)\"" }
+                  - { label: "File", name: "file", widget: "file", media_folder: "/files/uploads", public_folder: "/files/uploads" }
 
   - name: "pages"
     label: "Pages"
@@ -68,4 +78,10 @@ collections:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Slug", name: "slug", widget: "string", hint: "Used in the URL — lowercase letters, numbers, and dashes only, no spaces (e.g. about)." }
               - { label: "Show in navigation menu", name: "nav", widget: "boolean", default: true }
+              - { label: "Cover Image", name: "cover", widget: "image", required: false }
               - { label: "Content", name: "body", widget: "markdown" }
+              - label: "Gallery"
+                name: "gallery"
+                widget: "list"
+                required: false
+                field: { label: "Image", name: "image", widget: "image" }
