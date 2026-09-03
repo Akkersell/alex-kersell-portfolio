@@ -21,31 +21,21 @@
       "category": "Engineering"
     },
     {
-      "body": "Sponsored Education Practicum — 09/2023 to 12/2023\n\nConducted user testing, heuristic analysis, and recommendations for a product supporting handicapped youth education.",
-      "summary": "User research and design recommendations for a product supporting handicapped youth education.",
-      "slug": "community-vision-project",
+      "body": "LVPDU Switch — 06/2024 to 09/2024\n\nDesigned, prototyped, and tested a switch to assist in protecting a battery system. The switch was sensitive to voltage, current, and temperature. And was designed to fail open in all cases to protect the battery.",
+      "summary": "Essentially a glorified switch to protect a medium voltage battery",
+      "slug": "open-fail-switch",
       "date": "2023-12-01",
-      "gallery": [],
+      "gallery": [
+        "/images/uploads/img_5435.jpg",
+        "/images/uploads/img_5447.jpg",
+        "/images/uploads/img_5434.jpg",
+        "/images/uploads/img_5405.jpg"
+      ],
       "cover": "",
-      "title": "Community Vision Project",
+      "title": "LVPDU Open-Fail Switch",
       "tags": [
         "Human-Centered Design",
         "User Research"
-      ],
-      "link": "",
-      "category": "Engineering"
-    },
-    {
-      "body": "Intel Curated Project — 01/2023 to 05/2023\n\nConceptualized, designed, and prototyped an accessible note-taking alternative.",
-      "summary": "An accessible note-taking alternative, conceptualized and prototyped for an Intel-curated design project.",
-      "slug": "making-magic-of-the-mundane",
-      "date": "2023-05-01",
-      "gallery": [],
-      "cover": "",
-      "title": "Making Magic of the Mundane",
-      "tags": [
-        "Prototyping",
-        "Accessibility"
       ],
       "link": "",
       "category": "Engineering"
