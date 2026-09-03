@@ -50,9 +50,12 @@
       return;
     }
     document.title = item.title + (site.name ? ' — ' + site.name : '');
+    const gallery = (item.gallery || []).map(g => (g && g.image) ? g.image : g).filter(Boolean);
     el.innerHTML = `
+      ${item.cover ? coverHTML(item, 'large') : ''}
       <h1>${escapeHTML(item.title)}</h1>
       <div class="prose">${renderMarkdown(item.body || '')}</div>
+      ${gallery.length ? `<div class="gallery">${gallery.map(src => `<img src="${escapeHTML(src)}" loading="lazy" alt="${escapeHTML(item.title)}">`).join('')}</div>` : ''}
     `;
   }catch(e){
     el.innerHTML = '<p class="empty">Could not load this page.</p>';
