@@ -1,0 +1,10 @@
+{
+  "items": [
+    {
+      "title": "About",
+      "slug": "about",
+      "nav": true,
+      "body": "I'm an electrical engineer finishing my degree at the University of Portland, with hands-on experience in signal processing, embedded systems, and power systems, built through internships and independent projects.\n\nI'm increasingly drawn to biomedical engineering through coursework in neuroscience, neuroimaging, and brain stimulation, and I'm interested in roles where signal processing and hardware design meet medical devices and neurotechnology.\n\n## Experience\n\n**PV/BESS Engineering Intern — RRC Internship** (06/2025 – 12/2025)\n\nPerformed ampacity analysis for on-site cabling, prepared markups for 10% IFC drawings, and built a Python tool for geographic bore length estimation.\n\n**Low-Voltage Power Distribution Intern — Eaton** (06/2024 – 12/2024)\n\nDesigned, prototyped, and tested low-voltage power distribution units (PDUs), and collaborated with cross-functional teams on product validation.\n\n**Specialty Department Team Member — Whole Foods** (05/2023 – 08/2023)\n\nManaged the wine, beer, charcuterie, and olive bar sections, and handled closing operations.\n\n## Education\n\n**B.S. Electrical Engineering — Minor in Innovation**, University of Portland — Portland, OR (05/2026)\n\n## Skills\n\nPython, C++, Java, Altium, Digital Signal Processing, Logic Design, Communication Systems, Power Systems, Human-Centered Design."
+    }
+  ]
+}
