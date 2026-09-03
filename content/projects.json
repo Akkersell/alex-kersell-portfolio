@@ -22,17 +22,24 @@
     },
     {
       "body": "Intel Curated Project — 01/2023 to 05/2023\n\nConceptualized, designed, and prototyped an accessible note-taking alternative.",
-      "summary": "An accessible note-taking alternative, conceptualized and prototyped for an Intel-curated design project.",
-      "slug": "making-magic-of-the-mundane",
+      "summary": "Essentially as glorified switch to protect medium voltage battery.",
+      "slug": "open-fail-power-safety-switch",
       "date": "2023-05-01",
-      "gallery": [],
-      "cover": "",
-      "title": "Making Magic of the Mundane",
+      "gallery": [
+        "/images/uploads/img_5447.jpg",
+        "/images/uploads/img_5434.jpg"
+      ],
+      "cover": "/images/uploads/img_5435.jpg",
+      "title": "Open-Fail Power Safety Switch",
       "tags": [
         "Prototyping",
-        "Accessibility"
+        "Circuit Design",
+        "Electrical Test Design"
       ],
       "link": ""
+    },
+    {
+      "body": "LVPDU Switch Project — 06/2025 to 09/2025\n\nLVPDU switch designed to assist battery voltage regulation. Sensitive to voltage levels, spikes, and fails open to protect battery."
     }
   ]
 }
