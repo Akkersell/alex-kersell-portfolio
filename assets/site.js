@@ -83,6 +83,19 @@ function renderTags(tags){
   return '<div class="tag-row">' + items.map(t => `<span class="tag">${t}</span>`).join('') + '</div>';
 }
 
+function renderAttachments(items){
+  if(!items || !items.length) return '';
+  const rows = items
+    .filter(a => a && a.file)
+    .map(a => {
+      const label = a.label || decodeURIComponent(String(a.file).split('/').pop());
+      return `<li><a href="${escapeHTML(a.file)}" target="_blank" rel="noopener">${escapeHTML(label)}</a></li>`;
+    })
+    .join('');
+  if(!rows) return '';
+  return `<div class="attachments"><h3>Attachments</h3><ul class="attachment-list">${rows}</ul></div>`;
+}
+
 function coverHTML(item, size){
   const cls = size === 'large' ? 'cover cover-large' : 'cover';
   if(item.cover){
@@ -92,15 +105,8 @@ function coverHTML(item, size){
   return `<div class="${cls} cover-placeholder"><span>${escapeHTML(initial)}</span></div>`;
 }
 
-function renderProjectGrid(items){
-  const grid = document.getElementById('project-grid');
-  if(!grid) return;
-  if(!items || !items.length){
-    grid.innerHTML = '<p class="empty">No projects yet — add your first one from /admin.</p>';
-    return;
-  }
-  const sorted = items.slice().sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0));
-  grid.innerHTML = sorted.map(item => `
+function projectCardHTML(item){
+  return `
     <a class="project-card" href="/project.html?slug=${encodeURIComponent(item.slug)}">
       ${coverHTML(item)}
       <div class="project-card-body">
@@ -109,7 +115,43 @@ function renderProjectGrid(items){
         ${renderTags(item.tags)}
       </div>
     </a>
-  `).join('');
+  `;
+}
+
+/* Projects are split into two homepage sections by their "category"
+   field (Engineering / Hobby, set in the editor). Each category has its
+   own <section> + grid in index.html; a category with no items yet is
+   hidden rather than shown empty. */
+function renderProjectGrid(items){
+  const categories = [
+    { key: 'Engineering', sectionId: 'projects', gridId: 'project-grid-engineering' },
+    { key: 'Hobby', sectionId: 'hobbies', gridId: 'project-grid-hobby' }
+  ];
+  const firstGrid = document.getElementById(categories[0].gridId);
+  if(!firstGrid) return;
+
+  if(!items || !items.length){
+    firstGrid.innerHTML = '<p class="empty">No projects yet — add your first one from /admin.</p>';
+    categories.slice(1).forEach(cat => {
+      const section = document.getElementById(cat.sectionId);
+      if(section) section.hidden = true;
+    });
+    return;
+  }
+
+  categories.forEach(cat => {
+    const grid = document.getElementById(cat.gridId);
+    const section = document.getElementById(cat.sectionId);
+    if(!grid) return;
+    const catItems = items.filter(item => (item.category === 'Hobby' ? 'Hobby' : 'Engineering') === cat.key);
+    if(!catItems.length){
+      if(section) section.hidden = true;
+      return;
+    }
+    if(section) section.hidden = false;
+    const sorted = catItems.slice().sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0));
+    grid.innerHTML = sorted.map(projectCardHTML).join('');
+  });
 }
 
 async function initNav(site){
