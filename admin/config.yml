@@ -1,0 +1,71 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+
+  - name: "site"
+    label: "Site Settings"
+    files:
+      - file: "content/site.json"
+        label: "Site Settings"
+        name: "site"
+        fields:
+          - { label: "Your Name", name: "name", widget: "string" }
+          - { label: "Role / Tagline", name: "role", widget: "string" }
+          - { label: "Short Intro", name: "intro", widget: "text" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Location", name: "location", widget: "string" }
+          - { label: "LinkedIn URL", name: "linkedin", widget: "string", required: false }
+          - { label: "GitHub URL", name: "github", widget: "string", required: false }
+          - { label: "Resume File (PDF)", name: "resume", widget: "file", required: false }
+
+  - name: "projects"
+    label: "Projects"
+    files:
+      - file: "content/projects.json"
+        label: "Projects"
+        name: "projects"
+        fields:
+          - label: "Projects"
+            name: "items"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Slug", name: "slug", widget: "string", hint: "Used in the URL — lowercase letters, numbers, and dashes only, no spaces (e.g. my-cool-project)." }
+              - { label: "Summary", name: "summary", widget: "text", hint: "One or two sentences shown on the project card." }
+              - { label: "Cover Image", name: "cover", widget: "image", required: false }
+              - label: "Tags"
+                name: "tags"
+                widget: "list"
+                required: false
+                field: { label: "Tag", name: "tag", widget: "string" }
+              - { label: "Date", name: "date", widget: "date", required: false }
+              - { label: "External Link", name: "link", widget: "string", required: false, hint: "Optional link to a live demo, repo, etc." }
+              - { label: "Full Description", name: "body", widget: "markdown" }
+              - label: "Gallery"
+                name: "gallery"
+                widget: "list"
+                required: false
+                field: { label: "Image", name: "image", widget: "image" }
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "content/pages.json"
+        label: "Pages"
+        name: "pages"
+        fields:
+          - label: "Pages"
+            name: "items"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Slug", name: "slug", widget: "string", hint: "Used in the URL — lowercase letters, numbers, and dashes only, no spaces (e.g. about)." }
+              - { label: "Show in navigation menu", name: "nav", widget: "boolean", default: true }
+              - { label: "Content", name: "body", widget: "markdown" }

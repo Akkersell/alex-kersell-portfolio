@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="/">Portfolio</a>
+    <nav id="site-nav" class="site-nav"></nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1 id="hero-name">&nbsp;</h1>
+    <p class="hero-role" id="hero-role"></p>
+    <p class="hero-intro" id="hero-intro"></p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn">View projects</a>
+      <a href="#contact" class="btn btn-ghost">Contact</a>
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div id="project-grid" class="project-grid"></div>
+  </section>
+</main>
+
+<footer id="contact" class="site-footer">
+  <div class="wrap">
+    <p id="footer-contact"></p>
+  </div>
+</footer>
+
+<script src="/assets/site.js"></script>
+<script>
+(async function(){
+  try{
+    const site = await fetchJSON('/content/site.json');
+    document.title = (site.name || 'Portfolio') + (site.role ? ' — ' + site.role : '');
+    document.getElementById('hero-name').textContent = site.name || '';
+    document.getElementById('hero-role').textContent = site.role || '';
+    document.getElementById('hero-intro').textContent = site.intro || '';
+    document.getElementById('footer-contact').innerHTML = footerContactHTML(site);
+    await initNav(site);
+  }catch(e){
+    console.error(e);
+  }
+
+  try{
+    const data = await fetchJSON('/content/projects.json');
+    renderProjectGrid(data.items || []);
+  }catch(e){
+    document.getElementById('project-grid').innerHTML = '<p class="empty">Could not load projects.</p>';
+    console.error(e);
+  }
+})();
+</script>
+</body>
+</html>
