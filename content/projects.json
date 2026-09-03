@@ -1,40 +1,54 @@
 {
   "items": [
     {
-      "title": "Handheld Acoustic Levitation Device",
-      "slug": "acoustic-levitation-device",
-      "category": "Engineering",
-      "summary": "A handheld ultrasonic transducer array that acoustically levitates and manipulates small objects in mid-air.",
-      "cover": "",
-      "tags": ["Signal Processing", "Embedded Systems", "Senior Capstone"],
-      "date": "2026-05-01",
-      "link": "",
       "body": "Senior Capstone Project — 09/2025 to 05/2026\n\nDesigned and built a handheld ultrasonic transducer array to acoustically levitate and manipulate 5mm polystyrene spheres.\n\nApproximated acoustic field behavior using standing wave theory to guide transducer placement and phasing, then wrote Python software to control the transducer array and drive real-time levitation and movement of the spheres.",
-      "gallery": []
+      "summary": "A handheld ultrasonic transducer array that acoustically levitates and manipulates small objects in mid-air.",
+      "slug": "acoustic-levitation-device",
+      "date": "2026-05-01",
+      "gallery": [
+        "/images/uploads/img_6593.jpg",
+        "/images/uploads/img_6608.jpg",
+        "/images/uploads/img_6600.jpg"
+      ],
+      "cover": "/images/uploads/img_3795.jpg",
+      "title": "Handheld Acoustic Levitation Device",
+      "tags": [
+        "Signal Processing",
+        "Embedded Systems",
+        "Senior Capstone"
+      ],
+      "link": "",
+      "category": "Engineering"
     },
     {
-      "title": "Community Vision Project",
-      "slug": "community-vision-project",
-      "category": "Engineering",
-      "summary": "User research and design recommendations for a product supporting handicapped youth education.",
-      "cover": "",
-      "tags": ["Human-Centered Design", "User Research"],
-      "date": "2023-12-01",
-      "link": "",
       "body": "Sponsored Education Practicum — 09/2023 to 12/2023\n\nConducted user testing, heuristic analysis, and recommendations for a product supporting handicapped youth education.",
-      "gallery": []
+      "summary": "User research and design recommendations for a product supporting handicapped youth education.",
+      "slug": "community-vision-project",
+      "date": "2023-12-01",
+      "gallery": [],
+      "cover": "",
+      "title": "Community Vision Project",
+      "tags": [
+        "Human-Centered Design",
+        "User Research"
+      ],
+      "link": "",
+      "category": "Engineering"
     },
     {
-      "title": "Making Magic of the Mundane",
-      "slug": "making-magic-of-the-mundane",
-      "category": "Engineering",
-      "summary": "An accessible note-taking alternative, conceptualized and prototyped for an Intel-curated design project.",
-      "cover": "",
-      "tags": ["Prototyping", "Accessibility"],
-      "date": "2023-05-01",
-      "link": "",
       "body": "Intel Curated Project — 01/2023 to 05/2023\n\nConceptualized, designed, and prototyped an accessible note-taking alternative.",
-      "gallery": []
+      "summary": "An accessible note-taking alternative, conceptualized and prototyped for an Intel-curated design project.",
+      "slug": "making-magic-of-the-mundane",
+      "date": "2023-05-01",
+      "gallery": [],
+      "cover": "",
+      "title": "Making Magic of the Mundane",
+      "tags": [
+        "Prototyping",
+        "Accessibility"
+      ],
+      "link": "",
+      "category": "Engineering"
     }
   ]
 }
