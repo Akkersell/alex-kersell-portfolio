@@ -43,6 +43,22 @@
   </div>
 </footer>
 
+<!-- Netlify Identity: needed here (not just in /admin) so invite and
+     password-reset email links — which land on this homepage — can show
+     their "set your password" modal, then send you on to the editor. -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+if (window.netlifyIdentity) {
+  window.netlifyIdentity.on("init", user => {
+    if (!user) {
+      window.netlifyIdentity.on("login", () => {
+        document.location.href = "/admin/";
+      });
+    }
+  });
+}
+</script>
+
 <script src="/assets/site.js"></script>
 <script>
 (async function(){
