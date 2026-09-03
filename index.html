@@ -32,8 +32,12 @@
 
 <main class="wrap">
   <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div id="project-grid" class="project-grid"></div>
+    <h2>Engineering Projects</h2>
+    <div id="project-grid-engineering" class="project-grid"></div>
+  </section>
+  <section id="hobbies" class="section">
+    <h2>Hobbies &amp; Other Projects</h2>
+    <div id="project-grid-hobby" class="project-grid"></div>
   </section>
 </main>
 
@@ -78,7 +82,8 @@ if (window.netlifyIdentity) {
     const data = await fetchJSON('/content/projects.json');
     renderProjectGrid(data.items || []);
   }catch(e){
-    document.getElementById('project-grid').innerHTML = '<p class="empty">Could not load projects.</p>';
+    document.getElementById('project-grid-engineering').innerHTML = '<p class="empty">Could not load projects.</p>';
+    document.getElementById('hobbies').hidden = true;
     console.error(e);
   }
 })();
