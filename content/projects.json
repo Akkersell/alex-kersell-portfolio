@@ -58,17 +58,13 @@
       "title": "Hawaii Diorama",
       "slug": "diorama",
       "summary": "Scale diorama of Hawaii's power distribution, power types, and spinning wind turbines",
-      "cover": "/images/uploads/screenshot-2026-09-03-172125.jpg",
+      "cover": "",
       "tags": [
         "Arduino",
         "Basic Circuits"
       ],
       "body": "Researched, designed and created a scale model of Hawaii's power distribution. Complete with updating power production displays, led indicators, and servo wind turbines.",
-      "gallery": [
-        "/images/uploads/img_5723.jpg",
-        "/images/uploads/img_5755.jpg",
-        "/images/uploads/img_5756.jpg"
-      ]
+      "gallery": []
     }
   ]
 }
