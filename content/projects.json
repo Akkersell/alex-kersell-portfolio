@@ -71,6 +71,19 @@
         "/images/uploads/img_5755.jpg",
         "/images/uploads/img_5756.jpg"
       ]
+    },
+    {
+      "category": "Engineering",
+      "title": "Vibration Test Validator",
+      "slug": "vibration-test-validator",
+      "summary": "Created tool to validate circuit integrity during vibration testing",
+      "cover": "/images/uploads/img_5220.jpg",
+      "body": "Built a PCB designed to detect breaks and short circuits during product vibration testing",
+      "tags": [
+        "Soldering",
+        "Prodotyping",
+        "PCB"
+      ]
     }
   ]
 }
